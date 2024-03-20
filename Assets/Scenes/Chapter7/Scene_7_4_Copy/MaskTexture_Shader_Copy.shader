@@ -69,7 +69,7 @@
                 
                 float3 tangentNormalDir = UnpackNormal(packedNormal);
                 tangentNormalDir.xy *= _BumpScale;
-                tangentNormalDir.z = sqrt(1.0 -  dot(tangentNormalDir.xy,tangentNormalDir.xy));
+                tangentNormalDir.z = sqrt(1.0 -  saturate(dot(tangentNormalDir.xy,tangentNormalDir.xy)));
 
                 float3 albedo = _Color.rgb * tex2D(_MainTex,i.uv.xy);
                 float3 ambient = UNITY_LIGHTMODEL_AMBIENT.rgb * albedo.rgb;
