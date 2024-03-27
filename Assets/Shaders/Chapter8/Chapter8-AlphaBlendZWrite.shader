@@ -68,7 +68,7 @@ Shader "Unity Shaders Book/Chapter 8/Alpha Blending With ZWrite" {
 				
 				fixed3 albedo = texColor.rgb * _Color.rgb;
 				
-				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz * albedo;
+				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz * albedo.xyz;
 				
 				fixed3 diffuse = _LightColor0.rgb * albedo * max(0, dot(worldNormal, worldLightDir));
 				
