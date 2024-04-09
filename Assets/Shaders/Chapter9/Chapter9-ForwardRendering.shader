@@ -11,6 +11,7 @@ Shader "Unity Shaders Book/Chapter 9/Forward Rendering" {
 	SubShader {
 		Tags { "RenderType"="Opaque" }
 		
+		
 		Pass {
 			// Pass for ambient light & first pixel light (directional light)
 			Tags { "LightMode"="ForwardBase" }
