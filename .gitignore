@@ -8,6 +8,7 @@
 
 /Library
 
+/Apps
  
 
 # ----[ Visual Studio / MonoDevelop generated ]------- #
@@ -34,7 +35,7 @@ ExportedObj/
 
 *.booproj
 
-
+*.diagsession
 
 # -------------[ OS generated ]------------------------ #
 
