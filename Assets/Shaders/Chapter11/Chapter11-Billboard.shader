@@ -5,6 +5,7 @@ Shader "Unity Shaders Book/Chapter 11/Billboard" {
 	Properties {
 		_MainTex ("Main Tex", 2D) = "white" {}
 		_Color ("Color Tint", Color) = (1, 1, 1, 1)
+		// 代表了指向上方的方向的值，即 UP Dir = (0,_VerticalBillboarding,0)
 		_VerticalBillboarding ("Vertical Restraints", Range(0, 1)) = 1 
 	}
 	SubShader {

@@ -4,6 +4,7 @@ Shader "Unity Shaders Book/Chapter 11/Image Sequence Animation" {
 	Properties {
 		_Color ("Color Tint", Color) = (1, 1, 1, 1)
 		_MainTex ("Image Sequence", 2D) = "white" {}
+		// 精灵图序列帧的行列数
     	_HorizontalAmount ("Horizontal Amount", Float) = 4
     	_VerticalAmount ("Vertical Amount", Float) = 4
     	_Speed ("Speed", Range(1, 100)) = 30
