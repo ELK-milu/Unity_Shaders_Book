@@ -33,6 +33,7 @@ Shader "Unity Shaders Book/Chapter 12/Bloom" {
 			return o;
 		}
 		
+		
 		fixed luminance(fixed4 color) {
 			return  0.2125 * color.r + 0.7154 * color.g + 0.0721 * color.b; 
 		}
@@ -40,7 +41,6 @@ Shader "Unity Shaders Book/Chapter 12/Bloom" {
 		fixed4 fragExtractBright(v2f i) : SV_Target {
 			fixed4 c = tex2D(_MainTex, i.uv);
 			fixed val = clamp(luminance(c) - _LuminanceThreshold, 0.0, 1.0);
-			
 			return c * val;
 		}
 		
