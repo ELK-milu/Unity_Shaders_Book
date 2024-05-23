@@ -50,7 +50,7 @@
     			return o;
     		}
 
-		    // 计算对比度
+		    // 在线性颜色空间下的RGB 转为灰度值的心理学公式
 			fixed luminance(fixed4 color)
     		{
     			return 0.2125 * color.r + 0.7154 * color.g + 0.0721 * color.b;

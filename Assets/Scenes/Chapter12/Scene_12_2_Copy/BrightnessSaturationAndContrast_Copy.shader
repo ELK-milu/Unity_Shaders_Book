@@ -49,7 +49,7 @@ Shader "Custom/BrightnessSaturationAndContrast_Copy"
                 fixed4 renderTex = tex2D(_MainTex,i.uv);
                 fixed3 finalColor = renderTex.rgb * _Brightness;
 
-                // 自定义的饱和度值，当饱和度>1，权值越大的越明显，若<1则权值越小越明显
+                // 在线性颜色空间下的RGB 转为灰度值的心理学公式
                 fixed luminance = 0.2125 * renderTex.r + 0.7154 * renderTex.g + 0.0721 * renderTex.b;
                 fixed3 luminanceColor = fixed3(luminance,luminance,luminance);
                 finalColor = lerp(luminanceColor,finalColor,_Saturation);

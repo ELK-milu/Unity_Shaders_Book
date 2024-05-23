@@ -66,7 +66,6 @@ Shader "Unity Shaders Book/Chapter 13/Fog With Depth Texture" {
 		fixed4 frag(v2f i) : SV_Target {
 			float linearDepth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv_depth));
 			float3 worldPos = _WorldSpaceCameraPos + linearDepth * i.interpolatedRay.xyz;
-						
 			float fogDensity = (_FogEnd - worldPos.y) / (_FogEnd - _FogStart); 
 			fogDensity = saturate(fogDensity * _FogDensity);
 			

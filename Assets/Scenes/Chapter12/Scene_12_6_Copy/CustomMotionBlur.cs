@@ -27,7 +27,7 @@ public class CustomMotionBlur : CustomPostEffectsBase
 	}
 
 	// 检查保存渲染结果的RT是否可用（为空且尺寸与画面帧相符）
-	bool IsAccumulationTextureAvailable(RenderTexture source)
+	bool IsAccumulationTextureUnavailable(RenderTexture source)
 	{
 		return (m_accumulationTexture == null 
 		       || m_accumulationTexture.width != source.width 
@@ -38,7 +38,7 @@ public class CustomMotionBlur : CustomPostEffectsBase
 	{
 		if (BaseMaterial != null)
 		{
-			if (IsAccumulationTextureAvailable(source))
+			if (IsAccumulationTextureUnavailable(source))
 			{
 				// 若不可用则重建RT并渲染
 				DestroyImmediate(m_accumulationTexture);
